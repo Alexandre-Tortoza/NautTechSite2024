@@ -1,0 +1,221 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url(reset.css);
+
+:root{
+/* COLORS */
+    --text: #eff1f3;
+    --background: #0c1116;
+    --primary: #176974;
+    --secondary: #212e3f;
+    --accent: #9ab5be;
+
+/* ------ */
+
+
+/* Typo Scale */
+    --paragraphSize1:18px;
+    --paragraphLine1:32px;
+    --paragraphWeight1:400;
+    --paragraphWeight1_B:700;
+
+    --paragraphSize2:16px;
+    --paragraphLine2:26px;
+    --paragraphWeight2:400;
+    --paragraphWeight2_B:700;
+    
+    --paragraphSize3:14px;
+    --paragraphLine3:24px;
+    --paragraphWeight3:400;
+    --paragraphWeight3_B:700;
+
+/* ---------- */
+}
+/* Typo H */
+h1{
+    color: white;
+
+    font-family: "Kode Mono", monospace;
+    font-size: 70px ;
+    line-height: 70px ;
+    font-weight: 700 ;
+}
+h2{
+    color: white;
+
+    font-family: "Kode Mono", monospace;
+    font-size: 60px ;
+    line-height: 70px ;
+    font-weight: 700 ;
+}
+h3{
+    color: white;
+
+    font-size: 46px ;
+    line-height: 50px ;
+    font-weight: 700 ;
+}
+h4{
+    color: white;
+
+    font-size: 30px ;
+    line-height: 45px ;
+    font-weight: 700 ;
+}
+h5{
+    color: white;
+
+    font-size: 18px ;
+    line-height: 26px ;
+    font-weight: 400 ;
+}
+
+p{
+    color: white;
+
+    font-size: var(--paragraphSize1);
+    line-height: var(--paragraphLine1);
+    font-weight: var(--paragraphWeight1);
+}
+/* ------ */
+
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background);
+}
+
+
+/* ---------------------------------------------- */
+/* Header */
+    header{
+        background-color: #0c1116c4;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.308);
+        backdrop-filter: blur(10px);
+
+    }
+    header > *{
+        position: a;
+        margin: 15px 50px;
+        
+    }
+    header > nav > a{
+        color: white;
+        text-decoration: none;
+        margin: 0 .8rem;
+        padding: 1rem;
+    }
+
+
+/* Hedaer - Fim */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* Main */
+.hook{
+    position: relative;
+    z-index: -10;
+    color: white;
+}
+.hook > img{
+    width: 100%;
+    height: auto;
+}
+.hook__text{
+    position: absolute;
+    top: 50%;
+    margin: 0 50px;
+    max-width: 60%;
+}
+/* Main__SobreNos */
+
+    .sobreNos{
+        max-width: 1440px;
+        margin: auto;
+
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .sobreNos p {
+        text-align: justify;
+    }
+/* ------------- */
+/* main__portfolio */
+    .Portfolio{
+        max-width: 1440px;
+        margin: auto;
+        text-align: center;
+    }
+    .Portfolio p {
+        text-align: justify;
+    }
+    .Portfolio__intro{
+        max-width: 50%;
+        margin: auto;
+    }
+    .Portfolio > .Portfolio__projetos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        max-width: 80%;
+        margin: auto;
+
+    }
+/* Main Membros */
+    .equipe{
+        max-width: 1440px;
+        margin: auto;
+    }
+    .equipe h3{
+        text-align: center;
+    }
+    .equipe__membro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 70%;
+        margin: auto;
+    }
+
+#equipe__membro--meio{
+    max-width: 80%;
+}
+/* ----------- */
+/* main - Contato */
+    .contato {
+        height: 50vh;
+        position: absolute;
+        width: 100%;
+    }
+
+    .contato h3{
+        text-align: center;
+    }
+    
+    .contato__box{
+        margin: 50px;
+        padding: 1rem;
+        position: absolute;
+        top: 20%;
+        background-color: #0c1116be;
+        border-radius: 20px;
+    }
+
+    .contato iframe{
+
+        filter: grayscale(100%) opacity(20%);
+    }
+/* -------------- */
+/* Main - Fim */
+/* ---------------------------------------------- */
+
