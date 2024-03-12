@@ -32,6 +32,11 @@
 
 /* ---------- */
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 /* Typo H */
 h1{
     color: white;
@@ -68,7 +73,7 @@ h5{
 
     font-size: 18px ;
     line-height: 26px ;
-    font-weight: 400 ;
+    font-weight: 200 ;
 }
 
 p{
@@ -101,9 +106,7 @@ body{
 
     }
     header > *{
-        position: a;
         margin: 15px 50px;
-        
     }
     header > nav > a{
         color: white;
@@ -128,7 +131,7 @@ body{
 }
 .hook__text{
     position: absolute;
-    top: 50%;
+    top: 40%;
     margin: 0 50px;
     max-width: 60%;
 }
@@ -137,16 +140,125 @@ body{
     .sobreNos{
         max-width: 1440px;
         margin: auto;
-
         padding: 50px;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         gap: 1rem;
     }
     .sobreNos p {
         text-align: justify;
     }
+    .sobreNos > div{
+        max-width: 45%;
+    }
+/* Main - Skills Bar */
+
+/*
+<li>
+
+    <h4>HTML</h4>
+
+    <span class="skills__bar">
+
+        <span class="bar__html">
+        </span>
+
+    </span>
+
+</li> 
+*/
+
+.skills{
+    list-style: none;
+    width: 500px;
+    margin: 60px auto;
+    color: #fff;
+    pad: 20px;
+    box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.skills h4{
+    font-size: medium;
+}
+
+.skills li{
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.skills__bar{
+    background-color: var(--secondary);
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skills__bar:hover{
+    box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.skills__bar span{
+    height: 20px;
+    float: left;
+    background:linear-gradient(135deg,var(--accent)0% ,var(--primary) 50%);
+}
+
+
+
+.bar__solEmp{
+    width: 95%;
+    animation: solEmp 3s;
+}
+.bar__consultoria{
+    width: 85%;
+    animation: consultoria 3s;
+}
+.bar__aut{
+    width: 70%;
+    animation: aut 3s;
+}
+.bar__apli{
+    width: 80%;
+    animation: apli 3s;
+}
+
+@keyframes solEmp{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 95%;
+    }
+}
+@keyframes consultoria{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 85%;
+    }
+}
+
+@keyframes aut{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+@keyframes apli{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
 /* ------------- */
 /* main__portfolio */
     .Portfolio{
@@ -178,24 +290,35 @@ body{
     }
     .equipe h3{
         text-align: center;
+        margin: 2rem 0;
     }
     .equipe__membro{
         display: flex;
         justify-content: center;
+        gap: 20px;
         align-items: center;
-        max-width: 70%;
+        max-width: 80%;
         margin: auto;
+        text-align: justify;
     }
-
+    .equipe__membros img{
+        border-radius: 100%;
+    }
 #equipe__membro--meio{
-    max-width: 80%;
+    max-width: 75%;
 }
+#equipe__membro--meio  h4,#equipe__membro--meio  h5{
+    text-align: right;
+}
+
+
 /* ----------- */
 /* main - Contato */
     .contato {
         height: 50vh;
         position: absolute;
         width: 100%;
+        margin-top: 5rem;
     }
 
     .contato h3{
@@ -203,19 +326,122 @@ body{
     }
     
     .contato__box{
-        margin: 50px;
         padding: 1rem;
+        margin-left: 50px;
         position: absolute;
-        top: 20%;
+        top: 5%;
         background-color: #0c1116be;
         border-radius: 20px;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .contato iframe{
 
         filter: grayscale(100%) opacity(20%);
     }
+
+    .contato__link{
+        text-align: center;
+        margin: 1.5rem;
+    }
+    .contato__link a{
+        color: var(--text);
+        text-decoration: none;
+        padding: 1rem 4rem;
+        border: 1px solid var(--primary);
+        transition-duration: .5s;
+
+    }
+
+    .contato__link a:hover{
+        background-color: #176974;
+        transition-duration: 1s;
+    }
 /* -------------- */
 /* Main - Fim */
 /* ---------------------------------------------- */
 
+/* ----------- */
+/* Mobile */
+@media screen and (max-width: 800px) {
+
+    /* main{
+        margin-top: 4rem;
+    } */
+    header nav{
+        display: none;
+    }
+    header h1{
+        font-size: 60px;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hook h2{
+        font-size: 40px;
+        line-height: 45px;
+        text-align: left;
+        margin-bottom: 25px;
+    }
+    .hook__text{
+        max-width: 90%;
+        margin: 0;
+        text-align: justify;
+        right: 5%;
+        
+    }
+    .hook img{
+        margin-top: 3rem;
+    }
+
+
+
+    .skills{
+        display: none;
+    }
+
+    .sobreNos {
+        margin-top: 40vh;
+        padding: 0;
+        display: block;
+
+    }
+    .sobreNos > div{
+        margin: auto;
+        max-width: 90%;
+    }
+
+    .equipe__membro{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #equipe__membro--meio{
+        max-width: 80%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .equipe__membro h4, .equipe__membro h5{
+        text-align: center !important;
+    }
+
+    .contato iframe{
+        display: none;
+    }
+    .contato__box{
+        margin: 0;
+        padding: 0;
+    }
+    .contato__box h4{
+        text-align: center;
+        font-size: 25px;
+        max-width: 90%;
+    }
+}
+/* -------------- */
